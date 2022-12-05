@@ -2,18 +2,17 @@
 def Ex3_10():
     num = int(input("Введите десятичное число для преобразования в шестнадцатиричную систему счисления: "))
     word = ""
-    while num > 15:
+    while num > 0:
         if num % 16 == 10: word += "A"
         elif num % 16 == 11: word += "B"
         elif num % 16 == 12: word += "C"
         elif num % 16 == 13: word += "D"
         elif num % 16 == 14: word += "E"
         elif num % 16 == 15: word += "F"
-        else: word += str(num % 16)
-        num /= 16
+        else: word += str(round(num % 16))
+        num //= 16
     word = word[::-1]
     print(word)
-
 
 # 3.11 Вводим с клавиатуры строку. Необходимо сказать, является ли эта строка дробным числом
 def Ex3_11():
