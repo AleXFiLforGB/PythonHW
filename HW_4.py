@@ -34,18 +34,16 @@ def Ex_4_2():
 # 3) Сгенерируйте список на 30 элементов. Отсортируйте список по возрастанию, методом сортировки выбором.
 def EX_4_3():
     nums = []
-    for i in range(30):
+    for i in range(10):
         nums.append(ran(1,100))
-    p_low = nums[k]
-    p_high = nums[k]
+    print(nums)
 
-    for k in nums:
-        if nums[k] > p_low: p_low = nums[k]
-        if nums[k] < p_high: p_high = nums[k]
-
-
-
-
+    for i in range(len(nums)):
+        low = i
+        for j in range(i + 1, len(nums)):
+            if nums[j] < nums[low]: low = j
+        nums[i], nums[j] = nums[j], nums[i]
+        print(nums)
 
 # Ex_4_1()
 # Ex_4_2()
